@@ -4,18 +4,18 @@ console.log('WORKER: executing.');
 var version = 'v2::';
 
 let offlineFundamentals = [
- 'https://github.com/Luckae/ALC/',
- 'https://github.com/Luckae/ALC/images/andela.png',
- 'https://github.com/Luckae/ALC/css/main.css',
- 'https://github.com/Luckae/ALC/images/bg-01.jpg',
- 'https://github.com/Luckae/ALC/manifest.json',
- 'https://github.com/Luckae/ALC/vendor/bootstrap/css/bootstrap.min.css',
- 'https://github.com/Luckae/ALC/vendor/bootstrap/js/popper.js',
- 'https://github.com/Luckae/ALC/vendor/bootstrap/js/bootstrap.min.js',
- 'https://github.com/Luckae/ALC/vendor/jquery/jquery-3.2.1.min.js',
+ 'https://luckae.github.io/ALC/',
+ 'https://luckae.github.io/ALC/images/andela.png',
+ 'https://luckae.github.io/ALC/css/main.css',
+ 'https://luckae.github.io/ALC/images/bg-01.jpg',
+ 'https://luckae.github.io/ALC/manifest.json',
+ 'https://luckae.github.io/ALC/vendor/bootstrap/css/bootstrap.min.css',
+ 'https://luckae.github.io/ALC/vendor/bootstrap/js/popper.js',
+ 'https://luckae.github.io/ALC/vendor/bootstrap/js/bootstrap.min.js',
+ 'https://luckae.github.io/ALC/vendor/jquery/jquery-3.2.1.min.js',
  'https://free.currencyconverterapi.com/api/v5/currencies',
- 'https://github.com/Luckae/ALC/js/convert.js',
- 'https://github.com/Luckae/ALC/js/localforage-1.7.2.min.js'
+ 'https://luckae.github.io/ALC/js/convert.js',
+ 'https://luckae.github.io/ALC/js/localforage-1.7.2.min.js'
 ];
 
 self.addEventListener('fetch', function(event) {
