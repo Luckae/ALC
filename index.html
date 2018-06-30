@@ -253,7 +253,8 @@ height:100%;
 <!--REGISTER SERVICE WORKER SCRIPT-->
      <script>
      if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('./sw.js').then(function(registration) {
+      navigator.serviceWorker.register('/sw.js',{
+  useCache: true}).then(function(registration) {
         console.log('ServiceWorker registration successful with scope: ', registration.scope);
      }).catch(function(err) {
           console.log('ServiceWorker registration failed: ', err);
