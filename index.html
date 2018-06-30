@@ -1,0 +1,265 @@
+<!DOCTYPE html5>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--=============================================================================================-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--=============================================================================================-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--=============================================================================================-->
+    <meta name="theme-color" content="#DB1563" />
+    <!--==============================================================================================-->
+    <meta name="description" content="A Simple Online and Offline Currency Converter App">
+    <!--================================================================================================-->
+    <link rel="manifest" href="/ALC/manifest.json"/>
+   <!--==============================================================================================-->
+    <meta name="keywords" content="Currency, Converter, Free, ALC, Challenge, Lawson , Luke, Nwachukwu">
+   <!--==============================================================================================-->
+   <meta name="author" content="Nwachukwu Lawson Luke">
+   <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="images/andela.png"/>
+   <!--===============================================================================================-->
+  	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!--==============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/js/bootstrap.min.js">
+   <!--===============================================================================================-->
+  	<link rel="stylesheet" type="text/css" href="css/main.css">
+  <!--===============================================================================================-->
+    <title>Currency converter</title>
+<style>
+
+/*STYLE PARAGRAPH THAT DISPLAYS CONVERSION RESULT */
+p.round1 {
+    border: 2px solid red;
+    height: 30px;
+    border-radius: 5px;
+}
+/*END OF STYLE PARAGRAPH THAT DISPLAYS RESULT */
+
+/*START OF HOVER BUTTON EFFECT */
+.btn{
+  background-color: #ED6471;
+  -webkit-transition: background-color 2s ease-out;
+  -moz-transition: background-color 2s ease-out;
+  -o-transition: background-color 2s ease-out;
+  transition: background-color 2s ease-out;
+}
+.btn:hover {
+  background-color: #39918A ;
+  cursor: pointer;
+}
+/*END OF HOVER BUTTON EFFECT */
+
+/*STYLE FORM ELEMENTS */
+.form-control:focus{border-color: #5cb85c;  box-shadow: 2px 2px 2px red; -webkit-box-shadow: none;}
+.has-error .form-control:focus{box-shadow: none; -webkit-box-shadow: none;}
+/*.form-control{border-width: 2px; border-color: #000000;}   */
+/*END OF STYLE FORM ELEMENTS */
+
+/* START OF FOOTER SECTION */
+section{
+  text-align:center;
+}
+.footer #button{
+	width:35px;
+	height:35px;
+	border: #727172 12px solid;
+	border-radius:35px;
+	margin:0 auto;
+	position:relative;
+	-webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+.footer #button:hover{
+	width:35px;
+	height:35px;
+	border: #3A3A3A 12px solid;
+	-webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+	position:relative;
+}
+.footer {
+	bottom:0;
+	left:0;
+	position:fixed;
+    width: 100%;
+    height: 2em;
+    overflow:hidden;
+    margin:0 auto;
+	-webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+	z-index:999;
+}
+.footer:hover {
+	-webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+	height: 10em;
+}
+.footer #container{
+	margin-top:5px;
+	width:100%;
+height:100%;
+  position:relative;
+  top:0;
+  left:0;
+	background: #3A3A3A;
+}
+.footer #cont{
+  position:relative;
+  top:-45px;
+  right:190px;
+	width:150px;
+	height:auto;
+	margin:0 auto;
+}
+.footer_center{
+	width:500px;
+	float:left;
+  text-align:center;
+}
+.footer h3{
+	font-family: 'Helvetica';
+	font-size: 30px;
+	font-weight: 100;
+	margin-top:70px;
+	margin-left:40px;
+}
+/*END OF FOOTER SECTION */
+</style>
+</head>
+
+<body>
+  <!--NAVIGATION BAR -->
+  <nav class="navbar navbar-default" style="background-color: #39918A ">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#" style="color:#ffffff; text-align:center">ALCWithGoogle Scholarship Project</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">ALC<span class="sr-only">(current)</span></a></li>
+        <li><a href="#">ALC</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">ALC</a></li>
+            <li><a href="#">ALC</a></li>
+            <li><a href="#">ALC</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">ALC</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">ALC</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<!--END OF NAVIGATION BAR -->
+
+  <div class="bg-contact2" style="background-image: url('images/bg-01.jpg');">
+   <div class="container-contact2">
+     <div class="wrap-contact2">
+       <div class="contact2-form">
+         <h4 class="contact2-form-title" style="font-family: Poppins-Regular;">
+           ALC 3.0 CURRENCY CONVERTER
+         </h4>
+    <table>
+    <tr>
+      <td>
+                <input type="number" class="form-control form-control-md"placeholder="Enter conversion value" style="background-color:#E9FCF5; color:#000;" id="number">
+            </td>
+            <td>
+                <select id="from" class="form-control form-control-lg" style="background-color:#FCE9F0"></select>
+            </td>
+          </tr>
+          <tr>
+            <td>
+                <p id="answer" class="round1" style="background:#E9FCF5; color:#000; text-align:center; font-style:bold;"></p>
+            </td>
+            <td>
+                <select id="to" class="form-control form-control-lg" style="background-color:#FCE9F0">
+
+                </select>
+            </td>
+          </tr>
+        </table>
+        <br />
+
+        					<div class="container-contact2-form-btn">
+        						<div class="wrap-contact2-form-btn">
+        <button id="convert" class="btn btn-lg" style="color:#ffffff" class="btn btn-lg">Convert</button>
+      </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="footer">
+  <div id="button"></div>
+<div id="container">
+<div id="cont">
+<div class="footer_center">
+	   <h3 style="color:#ffffff; font-family: Poppins-Regular;">&copy;2018 Nwachukwu Lawson Luke built it.</h3>
+
+</div>
+</div>
+</div>
+</div>
+
+<!--LOAD SCRIPTS -->
+    <script src="js/localforage-1.7.2.min.js"></script>
+     <script src="js/convert.js"></script>
+     <!--END OF LOAD SCRIPTS -->
+
+<!--REGISTER SERVICE WORKER SCRIPT-->
+     <script>
+     if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/ALC/sw.js').then(function(registration) {
+        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+     }).catch(function(err) {
+          console.log('ServiceWorker registration failed: ', err);
+        });
+     }
+     </script>
+     <!--END OF REGISTER SERVICE WORKER SCRIPT -->
+</body>
+</html>
