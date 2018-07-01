@@ -14,7 +14,7 @@ let offlineFundamentals = [
  './vendor/bootstrap/js/bootstrap.min.js',
  './vendor/jquery/jquery-3.2.1.min.js',
  'https://free.currencyconverterapi.com/api/v5/currencies',
- './ALC/js/convert.js',
+ './js/convert.js',
  './js/localforage-1.7.2.min.js'
 ];
 
