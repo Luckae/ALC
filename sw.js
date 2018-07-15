@@ -35,7 +35,8 @@ event.respondWith(
         }
         return response;
      }).catch(function(){
-            return new Response('The network totally failed');
+           // return new Response('The network totally failed');
+	    return caches.match(offlineFundamentals)
      })
     );
  });
