@@ -18,8 +18,12 @@ let offlineFundamentals = [
  './js/localforage-1.7.2.min.js'
 ];
 
+//self.addEventListener('fetch', function(event) {
+//console.log(event.request.url);
+//});
+
 self.addEventListener('fetch', function(event) {
-console.log(event.request.url);
+  event.respondWith(caches.match(event.request));
 });
 
 self.addEventListener('fetch', function(event){
